@@ -10,21 +10,16 @@
 
 
 <div class="example-wrapper">
-<h1>Liste des films ayant temp dans leurs noms !</h1>
+<h1>{{ movies.title }} ({{ movies.original_language }}), {{ movies.release_date }}</h1>
 
     <table>
     <div class="card">
-    {% dump movies %}
-    {% for movies in movies.results %}
         <tr>
             <img src="{{ ImagePrefix }}{{ movies.poster_path }}">
         </tr>
         <tr>
-            <h2>{{ movies.title }} ({{ movies.original_language }}), {{ movies.release_date }}</h>
             <h4>{{ movies.overview }}</h>
         </tr>
-        <br><br><br>
-    {% endfor %}
     </table>
 
 </div>

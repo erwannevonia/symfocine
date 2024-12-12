@@ -14,13 +14,12 @@
 
     <table>
     <div class="card">
-    {{ dump (movies) }}
     {% for movies in movies.results %}
         <tr>
             <img src="{{ ImagePrefix }}{{ movies.poster_path }}">
         </tr>
         <tr>
-            <h2>{{ movies.title }} ({{ movies.original_language }}), {{ movies.release_date }}</h>
+            <h2><a href="{{ movies.id }}">{{ movies.title }} ({{ movies.original_language }}), {{ movies.release_date }}</a></h>
             <h4>{{ movies.overview }}</h>
         </tr>
         <br><br><br>
